@@ -1,0 +1,458 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+      WiseDev -strony internetowe
+    </title>
+    <meta name="description" content="WiseDevelopers - strony internetowe i aplikacje, które pomagają rosnąć twojej firmie!" />
+    <meta name="keywords" content="wise, developer, webdeveloper, strony internetowe, strony firmowe, projektowanie stron internetowych, webdesign, warszawa, html, css, laravel, wordpress, internet, webpage, wizytówki, stronywww, www, strony internetowe" />
+    <meta name="author" content="Wise developers" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Dokdo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fontello.css" type="text/css" />
+    <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
+    <style>
+      .gradient {
+        background: linear-gradient(180deg, #00789d 0%, #232c33 100%);
+      }
+      .menugrad{
+        background: linear-gradient(180deg, #00ABE1 0%, ##0a85ad 100%)
+      }
+      /* Animate vertical fade in */
+      .animate {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.4s ease-in-out;
+      }
+
+      .animate.show {
+      opacity: 1;
+      transform: translateY(0);
+      }
+
+      @keyframes scrollText {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+
+      /* animate blurr fade in */
+      .anim-hidden{
+        opacity: 0;
+        transition: all 1s;
+        filter: blur(5px);
+      }
+      .anim-show{
+        opacity: 1;
+        filter: blur(0px);
+      }
+
+      /* animate side slide */
+      .slide-hidden{
+        opacity: 0;
+        transition: all 1s;
+        transform: translateX(-30%);
+        filter: blur(5px);
+      }
+      .slide-show{
+        opacity: 1;
+        transform: translateX(0);
+        filter: blur(0px);
+      }
+      .slide:nth-child(2){
+        transition-delay: 200ms;
+      }
+      .slide:nth-child(3){
+        transition-delay: 300ms;
+      }
+      .slide:nth-child(4){
+        transition-delay: 400ms;
+      }
+      .slides{
+        display:flex;
+        flex-wrap: wrap;
+      }
+
+    </style>
+
+  <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
+    <!--Nav-->
+
+    <nav id="header" class="fixed w-full z-30 top-0">
+      <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 pt-2">
+        <div class="pl-4 flex items-center">
+          <a class="toggleColour no-underline hover:no-underline font-bold text-2xl lg:text-4xl transform transition hover:scale-105 duration-300 ease-in-out" style="font-family: Dokdo"href="index.html">
+            Wise
+          </a>
+        </div>
+        <div class="block lg:hidden pr-4">
+          <button id="nav-toggle" class="flex items-center p-1 text-white  focus:outline-none focus:shadow-outline transform transition hover:scale-110 duration-300 ease-in-out">
+            <svg class="fill-current h-6 w-6 mb-1" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+        </div>
+        <div class="w-full flex-grow lg:flex items-center lg:w-auto hidden lg:mt-0 bg-black/30 lg:bg-transparent text-black lg:p-0 z-20"  id="nav-content">
+          <ul class="list-reset lg:flex justify-end flex-1 items-center md:mb-0 pb-2">
+
+
+            <li class="mr-3">
+              <a class="toggleColour inline-block py-2 px-4 font-bold no-underline transform transition hover:scale-110 duration-300 ease-in-out" href="onas.html">O nas</a>
+            </li>
+
+          </ul>
+
+        </div>
+        </div>
+
+      </div>
+      <hr class="border-b border-gray-100 opacity-25 py-0" />
+    </nav>
+
+    <!--Hero-->
+
+
+
+      <div class="w-full pt-10 pb-40 bg-slate-600" >
+      <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center my-0 py-0">
+        <!--Left Col-->
+        <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left block lg:hidden">
+
+          <h1 class="w-full md:w-4/5 z-50 text-slate-200" style="font-family: Dokdo; font-size: 10rem; text-shadow: 1px 1px 4rem  #061113;line-height: 80%;">Wise
+          </h1>
+
+        </div>
+        <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left  hidden sm:block">
+
+          <h1 class="w-full md:w-4/5 z-50" style="font-family: Dokdo; font-size: 24rem; text-shadow: 1px 1px 4rem  #061113;line-height: 80%;">Wise
+          </h1>
+
+        </div>
+
+        <!--Right Col-->
+
+        <div class="w-full md:w-3/5 py-2 text-center hidden sm:block md:text-right px-7">
+          <div class="py-4"> </div>
+        </div>
+      </div>
+
+      <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+        <!--Left Col-->
+        <div class="flex flex-col w-full md:w-2/5 justify-center hidden sm:block items-start text-center md:text-left">
+        </div>
+
+        <!--Right Col-->
+
+        <div class="w-full md:w-3/5 text-center md:text-right px-7 anim-hidden">
+          <div class="pt-12 md:pt-20 md:px-20 md:mx-10">
+            <hr class="w-full ml-auto items-center border-b border-gray-50 opacity-25 py-0" />
+            <p class="leading-normal text-xl md:text-2xl mt-4 text-left">
+              Od konkurencji odróżnia nas artystyczne podejście do projektów i najnowsze technologie. Nie korzystamy z gotowych szablonów Wordpressa. Wszystkie projekty tworzymy sami wykorzystując takie technologie jak Laravel, Vue, React, Typescript.
+              Dzięki temu Państwa strona internetowa może być niepowtarzalna i promowana przez algorytmy wyszukiwarek.
+            </p>
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+    <section class="pb-10 bg-slate-600" >
+      <div class="container max-w-[90%] mx-auto">
+        <img class="w-full rounded-br-3xlopacity-80 anim-hidden md:mb-40" src="images/cl7.png" />
+
+        <h2 class="w-full mb-10 mt-20 pt-10 text-3xl md:text-6xl font-bold leading-tight text-center">
+          Dlaczego warto współpracować z <span style="font-family: Dokdo"> Wise </span>?
+        </h2>
+        <hr class="w-4/5 ml-auto mx-auto mb-20 border-b border-gray-50 opacity-25 py-0" />
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-8 slides">
+          <div class="rounded-md p-4 slide slide-hidden">
+            <div class="flex items-start mx-left">
+              <img class="w-6 h-6 md:h-10 md:w-10 shadow-md mr-2" src="images/danger.png" />
+              <h2 class="text-xl md:text-2xl font-medium"> Bezpłatne doradztwo</h2>
+            </div>
+            <p class="text-l md:text-xl  mt-2">Na każdym etapie przygotowania aplikacji doradzamy Państwu możliwe najlepsze rozwiązania. Wskazujemy jakie technologie będą dla Państwa efektywne pod względem kosztów i wydajności. Zapewniamy pełne wsparcie techniczne po wdrożeniu aplikacji i jej rozwój.</p>
+          </div>
+          <div class="rounded-md p-4 slide slide-hidden">
+            <div class="flex items-start mx-left">
+              <img class="w-6 h-6 md:h-10 md:w-10 shadow-md mr-2" src="images/danger.png" />
+              <h2 class="text-xl md:text-2xl font-medium"> Wysoka pozycja w Google</h2>
+            </div>
+            <p class="text-l md:text-xl mt-2">Dzięki zastosowaniu nowoczesnych narzędzi nasze strony zajmują wysokie pozycje w wyszukiwarkach internetowych i pozwalają klientom odnaleźć Państwa firmę.</p>
+          </div>
+          <div class="rounded-md p-4 slide slide-hidden">
+            <div class="flex items-start mx-left">
+              <img class="w-6 h-6 md:h-10 md:w-10 shadow-md mr-2" src="images/danger.png" />
+              <h2 class="text-xl md:text-2xl font-medium"> Responsywność</h2>
+            </div>
+            <p class="text-l md:text-xl mt-2">Nasze strony internetowe automatycznie dostosowują się do rozmiaru ekranu na którym są wyświetlane. Są przyjazne dla użytkowników komputerów i telefonów komórkowych, co pozytywnie wpływa na doświadczenia użytkownika. Projektujemy strony w taki sposób, aby każdy gość mógł od razu znaleźć szukane informacje</p>
+          </div>
+          <div class="rounded-md p-4 slide slide-hidden">
+            <div class="flex items-start mx-left">
+              <img class="w-6 h-6 md:h-10 md:w-10 shadow-md mr-2" src="images/danger.png" />
+              <h2 class="text-xl md:text-2xl font-medium"> Wersje językowe i treść strony</h2>
+            </div>
+            <p class="text-l md:text-xl mt-2">Jesli działają Państwo na rynkach zagranicznych, wówczas stworzymy wiele wersji językowych strony, tak aby każdy użytkownik mógł zapoznać się z jej treścią w takim języku, jakiego aktualnie używa. Jeśli nie mają Państwo pomysłu na treść strony, wówczas pomożemy ją zredagować.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="pt-20 pb-4" style="background: linear-gradient(180deg, #475569 0%, #f8fafc 100%)">
+      <div class="container mx-auto flex flex-wrap pt-14 pb-20">
+        <h2 class="w-full my-8 text-5xl font-bold leading-tight text-center text-gray-800" style="text-shadow: 1px 1px 5rem  #c8f1f8;">
+          Jaka jest nasza historia?
+        </h2>
+        <div class="w-full mb-16">
+          <hr class="w-4/5 mx-auto items-center border-b border-gray-50 opacity-25 py-0 mb-6" />
+        </div>
+        <div class="slides">
+          <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink slide slide-hidden">
+            <div class="flex-1 rounded-t rounded-b-none overflow-hidden opacity-85" style="background-color:#f8fafc">
+                <div class="w-full font-bold text-xl text-gray-800 px-6 py-6">
+                  Tworzenie aplikacji to nasza pasja!
+                </div>
+                <p class="text-gray-800 text-base px-6 mb-5">
+                  Jesteśmy niewielkim zespołem, który zajmuje się tworzeniem stron i aplikacji internetowych od wielu lat. Naszą pasję zmieniliśmy w zawód dzięki któremu możemy tworzyć dla Państwa wybitne strony internetowe.
+                </p>
+
+            </div>
+          </div>
+          <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink slide slide-hidden">
+            <div class="flex-1 rounded-t rounded-b-none overflow-hidden opacity-85" style="background-color:#f8fafc">
+                <div class="w-full font-bold text-xl text-gray-800 px-6 py-6" >
+                  Jak długo programujemy?
+                </div>
+                <p class="text-gray-800 text-base px-6 mb-5">
+                  Firma Wise Developers powstała w 2022 roku, jednak posiadamy bardzo duże doświadczenie wyniesione z innych projektów. Niektórzy z nas pamiętają jeszcze pracę na Windowsach 95, ale cały czas się szkolimy i dzięki temu stosujemy najnowsze technologie.
+                </p>
+                <p class="text-gray-800 text-base px-6 mb-5">
+                  Podobne do nas firmy pracują na szablonach dostarczanych przez Wordpress. Według nas takie strony internetowe są powtarzalne, podobne do siebie i nie wykorzystują potencjału jaki jest dostępny za pomocą takich technologii jak Laravel czy Vue.
+                </p>
+
+            </div>
+
+          </div>
+          <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink slide slide-hidden">
+            <div class="flex-1 rounded-t rounded-b-none overflow-hidden opacity-85" style="background-color:#f8fafc">
+
+                <div class="w-full font-bold text-xl text-gray-800 px-6 py-6">
+                  Współpracujemy z doświadczonymi projektantami.
+                </div>
+                <p class="text-gray-800 text-base px-6 mb-5">
+                  Nasza firma specjalizuje się w programowaniu, jednak do poszczególnych projektów zatrudniamy zewnętrznych projektantów i artystów, którzy projektóją graficzną część strony. Następnie optymalizujemy projekt pod kątem funkcjonalności i obsługi. Zależy nam na tym, aby każda aplikacja była używana w sposób intuicyjny.
+                </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- FOOTER -->
+    <footer>
+    <!-- Change the colour #f8fafc to match the previous section colour -->
+      <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero">
+            <g class="wave" fill="#f8fafc">
+              <path
+                d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z"
+              ></path>
+            </g>
+            <g transform="translate(1.000000, 15.000000)" fill="#FFFFFF">
+              <g transform="translate(719.500000, 68.500000) rotate(-180.000000) translate(-719.500000, -68.500000) ">
+                <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496" opacity="0.100000001"></path>
+                <path
+                  d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+                  opacity="0.100000001"
+                ></path>
+                <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z" opacity="0.200000003"></path>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+
+      <section class="container mx-auto text-center py-6 mb-12 anim-hidden">
+        <h2 class="w-full my-2 text-4xl font-bold leading-tight text-center text-white">
+          Zadzwoń lub wyślij wiadomość email
+        </h2>
+        <div class="w-full mb-4">
+          <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
+        </div>
+        <h3 class="my-4 text-3xl leading-tight">
+          info@wisedevelopers.com
+        </h3>
+        <h3 class="my-4 text-3xl leading-tight">
+          502 947 429
+        </h3>
+        <div class="w-full mx-auto flex flex-wrap items-center justify-center">
+          <a class="mx-4 text-white no-underline hover:no-underline text-2xl lg:text-4xl transform transition hover:scale-105 duration-300 ease-in-out" href="https://www.instagram.com/wise_developers_/?igshid=ZDdkNTZiNTM%3D&fbclid=IwAR1y-6P8zyitC7zka1FfY4Wos05rirXvyUtkywGjFG4518xe4bahtNnlS-Q" target="_blank">
+            <img class="h-6" src="images/instagram.png" />
+          </a>
+          <a class="mx-4 text-white no-underline hover:no-underline text-2xl lg:text-4xl transform transition hover:scale-105 duration-300 ease-in-out" href="https://www.facebook.com/people/WiseDev/100090727395598/" target="_blank">
+            <img class="h-6" src="images/facebook.png" />
+          </a>
+          <a class="mx-4 text-white no-underline hover:no-underline text-2xl lg:text-4xl transform transition hover:scale-105 duration-300 ease-in-out" href="/" target="_blank">
+            <img class="h-6" src="images/github.png" />
+          </a>
+        </div>
+      </section>
+    </footer>
+
+    <script>
+      var scrollpos = window.scrollY;
+      var header = document.getElementById("header");
+      var navcontent = document.getElementById("nav-content");
+
+      var brandname = document.getElementById("brandname");
+      var toToggle = document.querySelectorAll(".toggleColour");
+
+      for (var i = 0; i < toToggle.length; i++) {
+            toToggle[i].classList.add("text-white");
+            toToggle[i].classList.remove("text-gray-100");
+          }
+
+      document.addEventListener("scroll", function () {
+        /*Apply classes for slide in bar*/
+        scrollpos = window.scrollY;
+
+        if (scrollpos > 10) {
+          header.classList.add("bg-black/30");
+
+          //Use to switch toggleColour colours
+          for (var i = 0; i < toToggle.length; i++) {
+          //  toToggle[i].classList.add("text-gray-800");
+          //  toToggle[i].classList.remove("text-white");
+          }
+          header.classList.add("shadow");
+
+        } else {
+          header.classList.remove("bg-black/30");
+          for (var i = 0; i < toToggle.length; i++) {
+            toToggle[i].classList.add("text-white");
+            toToggle[i].classList.remove("text-gray-100");
+          }
+
+
+          //Use to switch toggleColour colours
+          for (var i = 0; i < toToggle.length; i++) {
+            toToggle[i].classList.add("text-gray-100");
+            toToggle[i].classList.remove("text-white");
+          }
+
+          header.classList.remove("shadow");
+
+        }
+      });
+    </script>
+    <script>
+      /*Toggle dropdown list*/
+      /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
+
+      var navMenuDiv = document.getElementById("nav-content");
+      var navMenu = document.getElementById("nav-toggle");
+
+      document.onclick = check;
+      function check(e) {
+        var target = (e && e.target) || (event && event.srcElement);
+
+        //Nav Menu
+        if (!checkParent(target, navMenuDiv)) {
+          // click NOT on the menu
+          if (checkParent(target, navMenu)) {
+            // click on the link
+            if (navMenuDiv.classList.contains("hidden")) {
+              navMenuDiv.classList.remove("hidden");
+            } else {
+              navMenuDiv.classList.add("hidden");
+            }
+          } else {
+            // click both outside link and outside menu, hide menu
+            navMenuDiv.classList.add("hidden");
+          }
+        }
+      }
+      function checkParent(t, elm) {
+        while (t.parentNode) {
+          if (t == elm) {
+            return true;
+          }
+          t = t.parentNode;
+        }
+        return false;
+      }
+
+      // Fade in effect
+
+
+    const animateElements = document.querySelectorAll(".animate");
+
+    window.addEventListener("scroll", () => {
+      animateElements.forEach((element) => {
+        if (isElementInViewport(element)) {
+          element.classList.add("show");
+        }
+      });
+    });
+
+    function isElementInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <=
+          (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+   // animation fade in
+   const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) =>{
+		if (entry.isIntersecting){
+			entry.target.classList.add('anim-show');
+		} else{
+			entry.target.classList.remove('anim-show');
+		}
+		});
+	});
+
+	const hiddenElements = document.querySelectorAll('.anim-hidden');
+	hiddenElements.forEach((el) => observer.observe(el));
+
+  // animation slide in
+  const slideobserver = new IntersectionObserver((entries) => {
+		entries.forEach((entry) =>{
+		if (entry.isIntersecting){
+			entry.target.classList.add('slide-show');
+		} else{
+			entry.target.classList.remove('slide-show');
+		}
+		});
+	});
+
+	const slideElements = document.querySelectorAll('.slide-hidden');
+	slideElements.forEach((el) => slideobserver.observe(el));
+
+
+    </script>
+  </body>
+</html>
